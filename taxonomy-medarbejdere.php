@@ -14,19 +14,22 @@
                 
                 
                 <?php 
-                
+    
+                $term_id = $wp_query->queried_object->term_id;
+                $post_orderby = ($term_id == 26) ? 'menu_order': 'title';
+            
                 $post_order = 0;
     
                 $tax_query = get_posts(array(
                     'post_type' => 'medarbejder',
                     'posts_per_page' => -1,
-                    'orderby'   => 'title',
+                    'orderby'   => $post_orderby,
                     'order'     => 'ASC',
                     'tax_query' => array(
                         array(
                             'taxonomy' => 'medarbejdere',
                             'field'    => 'ID',
-                            'terms'    => $wp_query->queried_object->term_id,
+                            'terms'    => $term_id,
                         ),
 	               ),
                 ));
@@ -35,7 +38,7 @@
 
                 $post_order ++;
                 
-                $post_reading = '';
+                $post_reading = ($term_id == 26) ? ' reading': '';
 
                 include('partials/postlist-medarbejder.php');
                 
