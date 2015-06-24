@@ -3,9 +3,9 @@ $(function(){
     $('.mb-entry .dropdown').on('click',function(e){
         e.preventDefault();
         var div = $(this),
-            target = $(e.target); 
+            target = $(e.target);
         
-        if(target.is('strong')){
+        if(target.is('h6 strong') || target.is('h6')){
     
             if(div.hasClass('active')){
 
