@@ -1,0 +1,73 @@
+.sidemenu-container, .widget_nav_menu {
+    padding:10px 0px 30px;
+    margin:20px 10px;
+    background:url(statics/grid.png) repeat center white;
+    
+    h4, h4:hover, h4:active, .widget-title{
+        font-size: 1.3rem;
+        background:url(statics/smear.png) no-repeat right center;
+        padding:20px 40px 10px 20px;
+        display: inline-block;
+        color:$black!important;
+        font-weight:bold;
+    }
+    
+    ul{
+    
+            
+        
+        li{
+        
+            a{
+            
+                display: inline-block;
+                padding: 0px 10px 0px 20px;
+                color: $black;
+                max-width: 80%;
+                font-size: .9rem;
+                margin-bottom: 0px;
+                text-decoration: none;
+                font-weight: normal;
+                position: relative;
+                
+            }  
+            
+            a:after{
+                content:'';
+                background:url(statics/smear-2.png) no-repeat;
+                background-position: right top;
+                display:block;
+                position: absolute;
+                height:100%;
+                width:0;
+                transition:width 0s;
+                top:0;
+                margin-left:-20px;
+                
+            }
+                
+            a:hover:after{
+                width:100%;
+                transition:width .2s linear;
+            }
+        
+        }
+        
+        li.current_page_item a:after, 
+        li.current_page_item a:hover:after,
+        li.current-menu-item a:after, 
+        li.current-menu-item a:hover:after{
+            
+            background:url(statics/line-through.png) right center no-repeat;
+            cursor:default;
+            width:100%;
+            background-position: left 10px;
+        
+        } 
+    
+        
+        
+    }
+    
+
+}

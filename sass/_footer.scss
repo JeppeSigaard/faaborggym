@@ -1,0 +1,35 @@
+#footer {
+    display: block;
+    clear: both;
+    padding: 80px 20px 80px;
+    text-align: center;
+    color: #999;
+    font-size: 0.8rem;
+    
+    div{
+        
+        padding-top:5px;
+        display: inline-block;
+        border-top:2px solid #eee;
+        
+        a{
+            text-decoration: none;
+            color:inherit;
+            
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    a{
+        img{
+
+            width:auto;
+            opacity:.2;
+            max-width:100%;
+            margin:20px auto;
+
+        }
+    }
+}

@@ -1,0 +1,79 @@
+@media(min-width:600px){
+    
+    #content-main{
+
+        #home-left,#home-right{
+            float:right;
+            width:50%;
+        }
+
+        #home-center{
+            float:left;
+            width:50%;
+        }
+        
+    }
+
+}
+
+
+@media(min-width:960px){
+    
+    #content-main{
+
+        #home-left{
+            float:none;
+            width:33%;
+        
+        }
+        #home-right{
+            float:right;
+            width:33%;
+        }
+        
+        #home-top{
+             float:left;
+            width:67%;
+        
+        
+        }
+
+        #home-center{
+            float:left;
+            width:67%;
+        }
+        
+    }
+
+}
+
+
+@media(min-width:1150px){
+    
+    #content-main{
+
+        #home-left{
+            float:left;
+            width:25%;
+        
+        }
+        #home-right{
+            float:right;
+            width:25%;
+        }
+        
+        #home-top{
+            float:left;
+            width:75%;
+        
+        
+        }
+
+        #home-center{
+            float:none;
+            width:50%;
+        }
+        
+    }
+
+}

@@ -1,0 +1,144 @@
+#slideshow{
+    display: block;
+    background:$darkblue;
+    margin-bottom: 20px;
+    min-height: 230px;
+    
+    
+    .slide{
+        display:block;
+        overflow:hidden;
+        position:relative;
+    
+        .text{
+            
+            top:50%;
+            transform:translate(0,-50%);
+            position:absolute;
+            z-index:2;
+            padding-left:10px;
+            width:80%;
+            
+            h2,span{
+                @extend .blueonwhite;
+                font-weight:bold;
+                display:inline;
+                position:relative;
+                line-height:2.8rem;
+                }
+
+            span{
+                font-weight:normal;
+                
+                font-size:2rem;
+            }
+        }
+    
+    }
+    
+    img{
+        width:100%;
+        position:relative;
+        z-index:1;
+        display: block
+    }
+ 
+    &.no-bottom{
+        margin-bottom:0px;
+    }
+}
+
+#slideshow.loading{
+    @include loading($load_b);
+}
+
+
+
+
+.owl-theme .owl-controls{
+	position:absolute;
+	text-align: center;
+    width:100%;
+    bottom:20px;
+}
+
+
+
+
+
+.owl-theme .owl-controls .owl-dots{
+	display: inline-block;
+	zoom: 1;
+	display: inline;
+}
+.owl-theme .owl-controls .owl-dots div{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	margin: 5px 7px;
+	opacity: 1;
+	border-radius: 15px;
+	background: #fff;
+    transition:background .3s;
+    box-shadow:0px 0px 15px rgba(0,0,0,.3);
+}
+
+.owl-theme .owl-controls .owl-dots div.active,
+.owl-theme .owl-controls .owl-dots div:hover{
+	opacity: 1;
+    background:$blue;
+}
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+    height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+	min-height: 150px;
+	background: url(AjaxLoader.gif) no-repeat center center
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:800px){
+
+    #slideshow img{
+        width:150%;
+        margin-left:-25%;
+    }
+    
+    #slideshow .slide .text h2, #slideshow .slide .text span{
+        font-size:1.5rem;
+        line-height:2rem;
+    }
+}
+
+
+
+@media(max-width:480px){
+
+    #slideshow img{
+        width:200%;
+        margin-left:-50%;
+    }
+    
+    #slideshow .slide .text h2, #slideshow .slide .text span{
+        font-size:1rem;
+        line-height:1.4rem;
+    }
+}

@@ -1,0 +1,275 @@
+.status-container{
+    padding:20px 10px;
+    
+    hr.red{
+        margin:0!important;
+    }
+    
+    h4{
+        font-weight: bold;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        padding-left: 0;
+        color: black;
+        font-size: 175%;
+        line-height: 1.2;
+        display: block;
+    }
+}
+
+.status-container form{
+    position:relative;
+    margin-top: 20px;
+
+    input,select,textarea{
+        width:100%;
+        box-sizing:border-box;
+        border:none;
+        outline:none;
+        padding:0px .8rem;
+        border:solid white;
+        border-width:.8rem 0px;
+        font-size:.8rem;
+        line-height:1.2;
+        margin:5px 0px 2px;
+        border-radius: 0;
+        -webkit-appearance:none;
+        overflow:hidden;
+        resize: none;
+    }
+    
+    
+    
+    .error_msg{
+            box-sizing: border-box;
+            padding:5px;
+            background:#fff;
+            color:$black;
+            border:2px solid $red;
+            font-size:.7rem;
+            display: block;
+            margin: 5px 0px;
+            line-height: 1rem;
+            border-radius:2px;
+            >a{
+            color:$red;
+            
+            }
+        
+        }
+    
+    select{
+        background: url(statics/pilned.png) no-repeat right $lightblue;
+        color:$blue;
+    }
+    
+    input:disabled{
+        background:#f0f0f0;
+    }
+    
+    option:disabled{
+        color:#666;
+    }
+    
+    div{
+        position:relative;
+        padding:5px 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        width:100%;
+        
+    }
+    
+    #status-compose{
+        background: $red;
+    }
+    
+    #status-text {
+        padding-right: 30px;
+    }
+    
+    #status-login{
+        background:$black;
+    }
+    
+    #status-register{
+        background:$blue;
+        
+    }
+    
+    #status-text-count {
+        font-size: .7rem;
+        text-align: right;
+        position: absolute;
+        margin-top: -30px;
+        right: 15px;
+        display: block;
+        color:#666; 
+        line-height:1;
+    }
+    
+    #status-text-count.red {
+        
+        color:$red;
+     
+    }
+    
+    #status-buttons{
+        
+        height:40px;
+        overflow:hidden;
+        position:relative;
+        margin-bottom: 20px;
+        margin-top: 15px;
+            
+        >a{
+            cursor:pointer;
+            position:absolute;
+            height:30px;
+            line-height: 30px;
+            width:140px;
+            text-align: center;
+            color:#fff;
+            background-color:$black;
+            text-decoration: none;
+            border-radius:8px;
+            box-sizing:border-box;
+            background-position:center;
+            background-repeat:no-repeat;
+
+        
+            &:hover{
+                transition:box-shadow .2s;
+                box-shadow:0px 0px 5px rgba(0,0,0,.3);
+            }
+        }
+        
+        
+        .hidden-left{
+            position:absolute;
+            left:0%;
+            margin-left:-150px;
+        }
+        
+        .hidden-right{
+            position:absolute;
+            left:100%;
+            margin-left:0px;
+        }
+    
+        a.right{
+            left:100%;
+            margin-left:-140px;
+        }
+        
+        a.left{
+            left:0%;
+            margin-left:0px;
+        }
+        
+        a.loading{
+            background-image:url(statics/loading_dark.gif);
+            color: transparent;
+        
+        }
+        
+        #btn-send.loading{
+             @include loading($load_r);
+        
+        }
+        
+        #btn-register.loading{
+             @include loading($load_b);
+        
+        }
+        
+        div.left{
+            position:absolute;
+            padding:0;
+            margin-left:-10px;
+            color:$black;
+            font-size:.7rem;
+            line-height:1rem;
+            
+            >span:first-child{
+                font-weight: bold;
+                display: block;
+            }
+            
+            >a{
+                cursor:pointer;
+                text-decoration:underline;
+                font-weight: normal;
+                font-size:.7rem;
+                display: inline-block;
+                margin-right:5px;
+                color:$black;
+            }
+        }
+        
+        .logout{
+            background-color:$blue;
+        }
+        
+        #btn-send{
+            background-color:$red;
+        }
+        
+        #btn-register{
+            background-color:$blue;
+        }
+    }
+}
+
+
+
+#status-login{
+    display: none;
+}
+
+#status-register{
+    display:none;
+}
+
+#login-text{
+    width:50%;
+
+}
+
+
+
+.status_post{
+    
+    padding:20px 0px;
+    transition:opacity .2s;
+    
+    div{
+        padding:5px 0px 0px;
+        font-size:.7rem;
+        font-weight: bold;
+        }
+    
+    div:first-child{
+        padding:0px 10px;
+        span,span p{
+            @extend .whiteonblue;
+            font-size: 1.1rem;
+            line-height:1.8rem;
+            box-decoration-break: clone;
+        }
+    
+    }
+    
+}
+
+.status_post_new{
+    opacity:0;
+    height:0px;
+    overflow:hidden;
+}
+
+
+
+
+
+

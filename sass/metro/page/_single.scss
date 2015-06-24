@@ -1,0 +1,232 @@
+.content.ajax-load{
+    
+    #page-center{
+        opacity:.5;
+    }
+}
+
+.content{
+    padding:10px;
+    overflow:visible;
+    
+    #page-center{
+        opacity: 1;
+        transition:opacity 200ms; 
+        
+    }
+    
+    .toggle-full{
+        padding:10px;
+        box-sizing: border-box;
+        text-align: center;
+        font-weight: bold;
+
+        hr{
+            margin:20px 0px 0px;
+        }
+
+        a{
+            @extend .block-anchor;
+            background:$grey;
+            color:$metro-g-light-3;
+            
+            &.active{
+                background:$darkgrey;
+                color:white;
+            }
+        }
+
+        @media only screen and(min-width:768px){
+
+            float:right;
+            width:33.33333%;
+
+        }
+
+        @media only screen and(min-width:1280px){
+
+            float:left;
+            width:25%;
+        }
+
+    }
+    
+    main{
+        padding:10px;
+        box-sizing: border-box;
+        
+        hr{
+            margin:20px 0px 0px;
+        }
+        
+        @media only screen and(min-width:768px){
+        
+            width:66.6666%;
+            float:left;
+            
+        }
+        
+        @media only screen and(min-width:1280px){
+            
+            width:50%;
+            float:left;
+        }
+        
+        
+        
+    }
+    
+    main article{
+        position:relative;
+        padding:20px!important;
+        //background:rgba($blue,.02);
+        
+        &:before{
+            content:'';
+            position: absolute;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            opacity:.07;
+            z-index: -1;
+        }
+        
+        &.summary{
+            
+        }
+    }
+    
+    .sidebar-route{
+        padding:10px;
+        box-sizing: border-box;
+        
+        hr{
+            margin:20px 0px 0px;
+        }
+        
+        @media only screen and(min-width:768px){
+
+            float:right;
+            width:33.33333%;
+
+        }
+
+        @media only screen and(min-width:1280px){
+
+            width:25%;
+        }
+        
+        a{
+            @extend .block-anchor;
+            color:white;
+            font-size:90%;
+            position: relative;
+            transition: background .2s;
+            
+            &:before{
+                content:'';
+                width:100%;
+                height:100%;
+                top:0;
+                left:0;
+                background:rgba(255,255,255,.4);
+                position:absolute;
+            }
+            
+            &.current,
+            &:hover{
+                background:$darkgrey;
+            }
+        }
+        
+        @for $i from 1 through 10{
+            a:nth-child(#{$i}):before{
+                opacity:calc((10 - #{$i})/10);
+            }
+        }
+    }
+}
+
+
+#page-center article.summary {
+    
+    padding-bottom: 0px!important;
+    
+    .first{
+        padding-bottom: 20px;
+    }
+
+    .block:not(.active) *{
+        height:0px;
+        padding:0px;
+        margin:0px;
+        color:transparent;
+        overflow:hidden;
+    }
+    
+    .block{
+        margin:0px -20px;
+        padding:10px 20px;
+        position: relative;
+        border:solid white;
+        border-width: 20px 0px 0px;
+
+        h2,h3{
+            cursor: pointer;
+            transition: font-size .2s, padding .2s, border-bottom .2s;
+            
+            &:before{
+                    content:'+';
+                    position:absolute;
+                    width:40px;
+                    left:5px;
+                    text-align: center;
+                    font-size: 0;
+                    transition: font-size .2s, transform .2s;
+                }
+        }
+        
+        &:not(.pie){
+
+            h2, h3{
+                display: block;
+                font-size: 130%;
+                border-bottom: 0px solid #252525;
+                text-transform: none;
+                padding:0px 0px 0px 20px;
+                margin:0;
+                height:auto;
+                color:inherit;
+                
+                &:before{
+                    font-size: 100%;
+                }
+
+            }
+
+        }
+        
+        &.active{
+            
+            *{
+                height:auto;
+                color:inherit;
+                transition:height .2s, color .4s, margin .2s, padding .2s;
+                
+            }
+            
+            h2, h3{
+            
+                &:before{
+                    transform:rotate(-45deg);
+                }
+                
+                &+*{
+                    margin-top: 10px;
+                }
+            }
+            
+        }
+    }
+}

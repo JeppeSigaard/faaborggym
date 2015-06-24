@@ -1,0 +1,342 @@
+/* Sidestruktur */
+
+
+.top-space {
+    position: relative;
+    height: 55px;
+    }
+
+#content-top{
+    padding:20px 10px;
+}
+
+
+#page-title{
+    
+    color:$blue;
+    font-weight:bold;
+}
+
+
+#page-center{
+    article, .archive-content {
+        padding:20px 10px;
+        color:$darkgrey;
+        word-wrap: break-word;
+        
+        blockquote{
+            border-left: 3px solid #11789d;
+            margin: 1.5em 0px;
+            padding: 0.5em 10px;
+            quotes: "\201C""\201D""\2018""\2019";
+            font-style: italic;
+            
+            &:before{
+                color: #11789d;
+                content: open-quote;
+                font-size: 4em;
+                line-height: 0.1em;
+                margin-right: 0.25em;
+                vertical-align: -0.4em;
+            }
+            
+            p:first-child{
+                display: inline;
+            }
+            
+            p:nth-child(2) {
+                margin-top: 10px;
+            }
+        }
+        
+        em{
+            font-style:italic;
+        }
+        
+        strong{
+            font-weight:bold;
+        }
+        
+        ul, ol {
+            background: $grid;
+            padding: 10px 40px;
+            display: block;
+            background-position: center 10px;
+        }
+    
+    
+        h1,h2,h3,h4,g5,h6{
+            padding:10px 0px;
+            font-weight:bold!important;
+        }
+        
+        h3{
+            border-bottom: 3px solid $black;
+            text-transform: uppercase;
+            font-size:1.3rem;
+            line-height: 1.5rem;
+            padding-bottom:2px;
+            margin-bottom:8px;
+            display: inline-block;
+            word-wrap: break-word;
+            max-width: 100%;
+        }
+        
+        p,li{
+            font-size:.9rem;
+        }
+        
+        p{
+            margin-bottom:10px;
+            line-height:1.4;
+        }
+        
+        a{
+            text-decoration: none;
+            color:$blue;
+            
+             &:hover{
+                text-decoration: underline;
+            }
+        }
+        img{
+            width:auto;
+            max-width:100%;
+            box-sizing:border-box;
+            position:relative;
+        }
+        
+        .video-container{
+            
+            position:relative;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            padding-top: 57%;
+            margin:10px 0px;
+        
+            iframe{
+                width:100%;
+                height:100%;
+                position:absolute;
+                top:0;
+            }
+        }
+    
+        .archive-entry{
+            
+            padding:20px 0px;
+            
+            img{
+                width:100%;
+            }
+            
+            h4{
+                padding:15px;
+            }
+        
+        }
+        
+    }
+    
+    
+    
+    .post-list{
+        padding: 10px 0px;
+        overflow: auto;
+    }
+}
+
+
+/* RESPONSIV Distribution af side */
+
+@media(min-width:600px){
+    
+    #content-top{
+        padding:20px;
+    }
+    
+    #content-main{
+
+        #page-left,#page-right{
+            float:right;
+            width:50%;
+            min-height: 1px;
+        }
+
+
+        #page-center{
+            float:left;
+            width:50%;
+            
+        }
+        
+    }
+
+}
+
+
+@media(min-width:720px){
+    
+    #content-main{
+
+        #page-left,#page-right{
+            width:40%;
+            clear:right;
+        }
+
+
+        #page-center{
+            width:60%;
+            
+        }
+        
+    }
+
+}
+
+
+@media(min-width:960px){
+    
+    #content-main{
+
+        #page-left{
+            /*float:none;*/
+            width:33%;
+        
+        }
+        #page-right{
+            float:right;
+            width:33%;
+        }
+        
+        #page-top{
+             float:left;
+            width:67%;
+        
+        
+        }
+
+        #page-center{
+            float:left;
+            width:67%;
+        }
+        
+    }
+
+}
+
+
+@media(min-width:1150px){
+    
+    #content-main{
+
+        #page-left{
+            float:left;
+            width:25%;
+            clear:none;
+        
+        }
+        #page-right{
+            float:right;
+            width:25%;
+            clear:none;
+        }
+        
+        #page-top{
+            float:left;
+            width:75%;
+        
+        
+        }
+
+        #page-center{
+            float:none;
+            width:50%;
+        }
+        
+    }
+
+}
+
+ #obl-table td{
+        padding:5px;
+    }
+
+
+#valgfag-table td, #valgfag-table th{
+        padding:5px;
+    }
+    
+    #valgfag-table tr{
+        background:rgba(46,133,165,.2);
+    }
+    
+    #valgfag-table tr:nth-child(2n){
+         background:rgba(46,133,165,.1);
+    }
+    
+    #valgfag-table td:nth-child(2), #valgfag-table th:nth-child(2){
+        color:white;
+        font-weight:bold;
+        background:rgba(46,133,165,1);
+        text-align:center;
+    }
+    #valgfag-table td:nth-child(3), #valgfag-table th:nth-child(3){
+        color:white;
+        font-weight:bold;
+        background:rgba(46,133,165,.8);
+        text-align:center;
+    }
+    #valgfag-table td:nth-child(4), #valgfag-table th:nth-child(4){
+        color:white;
+        font-weight:bold;
+        background:rgba(46,133,165,.6);
+        text-align:center;
+    }
+
+
+.page {
+    
+    .archive-entry {
+        
+        .archive-preread {
+            
+            max-height:200px;
+            overflow:hidden;
+            
+            &:after {
+                position: absolute;
+                content: '';
+                display: block;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 80%;
+                background: -moz-linear-gradient(top,  rgba(207,228,235,0.1) 0%, rgba(207,228,235,1) 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(207,228,235,0.2)), color-stop(100%,rgba(207,228,235,1))); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top,  rgba(207,228,235,0.1) 0%,rgba(207,228,235,1) 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top,  rgba(207,228,235,0.1) 0%,rgba(207,228,235,1) 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top,  rgba(207,228,235,0.1) 0%,rgba(207,228,235,1) 100%); /* IE10+ */
+                background: linear-gradient(to bottom,  rgba(207,228,235,0.1) 0%,rgba(207,228,235,1) 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33cfe4eb', endColorstr='#cfe4eb',GradientType=0 ); /* IE6-9 */
+
+            }
+            
+            .preread-inner{
+                
+                >h4 {
+                    z-index: 2;
+                    position: absolute;
+                    display: block;
+                    width:100%;
+                    box-sizing: border-box;
+                }
+                
+                .post-content{
+                    padding:20px 5px 0px;
+                }
+            }
+        }
+    }
+}

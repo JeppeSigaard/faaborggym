@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+.fg-editor.inactive{
+    height:0;
+    padding: 0;
+    overflow:hidden;
+    margin:0;
+}
+.fg-editor{
+    padding: 20px;
+    background: #f5f5f5;
+    margin: 20px 10px;
+    box-shadow: 1px 1px 7px rgba(black,0.1);
+    
+    .submit{
+        background:$blue center no-repeat;
+        margin:20px 0px 0px;
+        
+        &.loading{
+            font-size:0;
+            background:$blue url('statics/loading_blue.gif') center no-repeat;
+            cursor:default;
+        }
+    }
+    
+    form{
+        margin:0px 0px 20px;
+   
+    
+        label,input{
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        
+        label{
+            margin-bottom:2px;
+        }
+        
+        input[type="text"]{
+            height:35px;
+            line-height:35px;
+            font-family: inherit;
+            font-size: 1rem;
+            padding:0px 5px;
+            margin-bottom:10px;
+        }
+        
+    }
+    
+    .cancel{
+        display: block;
+        color:$red;
+        text-align: center;
+        padding:10px 0px 0px;
+    }
+}
+
+
+.toggle-new {
+    height: 35px;
+    line-height: 35px;
+    margin-top:20px;
+    
+    &.editor-active{
+        display: none;
+    }
+   
+}
+
+.archive-entry.reading .edit-delete{
+    display: block;
+}
+.archive-entry .edit-delete{
+    display: none;
+    position:absolute;
+    bottom:0;
+    right:0;
+    
+    a span{
+        display: block;
+        float:left;
+        position:relative;
+        margin:0;
+        padding:10px 10px 10px 0px;
+        bottom:0;
+        left:0;
+        color:white;
+        text-decoration: none;
+    }
+}
+
+.media-modal  .media-modal-icon .screen-reader-text{
+    font-size:0;
+}

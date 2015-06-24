@@ -1,0 +1,82 @@
+$skovbund-dark          :#768b6c;
+$skovbund-lightdark     :#88ab83;
+$skovbund-medium        :#99cc99;
+
+$skovbund-brun          :#422929;
+$skovbund-brun-2        :#b3a9a9;
+$skovbund-brun-3        :#c7bfbf;
+$skovbund-brun-4        :#d9d4d4;
+
+body.smamo-theme-4{
+    
+    background:$skovbund-brun;
+    color:#fff;
+    
+    hr.red{
+       background-image:url(statics/skovbund-long.png);
+    }
+    
+    #head, .ubermenu-skin-none.ubermenu-responsive-toggle {
+        background: $skovbund-medium;
+        transition:.5s;
+    
+    }
+    
+    .blueonwhite, #slideshow .slide .text h2, #slideshow .slide .text span{
+        color: #333;
+        background: $skovbund-medium;
+        box-shadow: 10px 0 0 $skovbund-medium, -10px 0 0 $skovbund-medium;
+    }
+    
+    
+    #page-title {
+        color:#fff;
+    }
+    
+    form #status-buttons div.left, form #status-buttons div.left > a {
+        color:#fff;
+    }
+    
+    .archive-entry .archive-content{
+        background:$skovbund-brun-4;
+        color:#333;
+    }
+    
+    .whiteonblue, .smamo_img_widget span, .status_post div:first-child span {
+        color: #333;
+        background: $skovbund-medium;
+        box-shadow: 10px 0 0 $skovbund-medium, -10px 0 0 $skovbund-medium;
+    }
+
+    .smamo_img_widget span {
+        color: #333;
+    }
+    
+    form #status-compose, form #status-buttons #btn-send {
+        background: $skovbund-medium;
+    }
+
+    
+    .archive-entry .archive-preread {
+        background: $skovbund-medium;
+        color:#fff;
+    
+        &:hover{
+            background: $skovbund-lightdark;
+        }
+    
+    }
+    
+    .archive-entry.reading:hover .archive-preread {
+        
+        background: $skovbund-medium;
+        color:#fff;
+    
+        &:hover{
+            background: $skovbund-medium;
+        }
+    
+    
+    }
+
+}

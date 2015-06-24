@@ -1,0 +1,461 @@
+.paper, .metro-map, .route-nav {
+  background: url(../statics/grid.png) repeat center #fff; }
+
+.block-anchor, .content .toggle-full a, .content .sidebar-route a {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 130%;
+  margin: 0px 0px 3px; }
+
+.route-52 .paint, .route-52 .before-paint:before, .route-52:before {
+  background-color: #5082bd; }
+
+.route-52 span {
+  border-color: #5082bd; }
+
+.route-53 .paint, .route-53 .before-paint:before, .route-53:before {
+  background-color: #01b050; }
+
+.route-53 span {
+  border-color: #01b050; }
+
+.route-54 .paint, .route-54 .before-paint:before, .route-54:before {
+  background-color: #fdc002; }
+
+.route-54 span {
+  border-color: #fdc002; }
+
+.route-55 .paint, .route-55 .before-paint:before, .route-55:before {
+  background-color: #fe0509; }
+
+.route-55 span {
+  border-color: #fe0509; }
+
+.route-56 .paint, .route-56 .before-paint:before, .route-56:before {
+  background-color: #662099; }
+
+.route-56 span {
+  border-color: #662099; }
+
+.metro-menu-container ul {
+  font-size: 0;
+  padding-left: 230px;
+  height: 44px;
+  box-sizing: border-box; }
+  .metro-menu-container ul li {
+    display: inline-block;
+    width: 20%;
+    height: 44px;
+    box-sizing: inherit; }
+  .metro-menu-container ul a {
+    box-sizing: inherit;
+    display: inline-block;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 0px 0px;
+    height: 44px;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    line-height: 44px;
+    vertical-align: top; }
+  .metro-menu-container ul .small-text a {
+    font-size: 12px;
+    padding: 9px 18%;
+    line-height: 1.1; }
+    @media only screen and (min-width: 1340px) {
+      .metro-menu-container ul .small-text a {
+        padding: 9px 25%; } }
+    @media only screen and (min-width: 1680px) {
+      .metro-menu-container ul .small-text a {
+        padding: 9px 30%; } }
+    @media only screen and (min-width: 2100px) {
+      .metro-menu-container ul .small-text a {
+        padding: 9px 36%; } }
+  .metro-menu-container ul .at a {
+    background: #5082bd; }
+  .metro-menu-container ul .srp a {
+    background: #01b050; }
+  .metro-menu-container ul .us a {
+    background: #fdc002; }
+  .metro-menu-container ul .ss a {
+    background: #fe0509; }
+  .metro-menu-container ul .sf a {
+    background: #662099; }
+
+.metro-banner {
+  background: url("statics/banner.jpg") center no-repeat;
+  background-size: cover;
+  height: 0px;
+  padding-bottom: 40%;
+  margin-bottom: 20px;
+  position: relative; }
+  .metro-banner svg {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+
+.metro-map {
+  min-height: 20vh;
+  margin: 20px 0px;
+  font-size: 0px;
+  padding: 40px 0px 80px; }
+  .metro-map .inner {
+    max-width: 1200px;
+    padding: 0px 20px;
+    margin: 0px auto;
+    position: relative; }
+  .metro-map h1 {
+    text-align: center;
+    color: #11789d;
+    font-weight: bold;
+    margin-bottom: 35px; }
+  .metro-map .top {
+    height: 160px;
+    width: 65%;
+    margin: auto;
+    position: relative; }
+    .metro-map .top:before {
+      content: '';
+      border-radius: 30px;
+      border: 4px solid #bababa;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 16.666666%;
+      width: 33.333333%;
+      height: 150px;
+      box-sizing: border-box;
+      border-right: none; }
+    .metro-map .top:after {
+      content: '';
+      border-radius: 30px;
+      border: 4px solid #797979;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      border-left: none;
+      width: 33.333333%;
+      height: 150px;
+      box-sizing: border-box; }
+  .metro-map .metro-ikon-tekst {
+    display: block;
+    width: 145px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    z-index: 3; }
+  .metro-map .map {
+    width: 65%;
+    margin: auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    z-index: 2; }
+    .metro-map .map:before {
+      content: '';
+      border-radius: 30px;
+      background: #8e8e8e;
+      position: absolute;
+      z-index: 2;
+      height: 100px;
+      top: -100px;
+      left: 50%;
+      width: 4px; }
+  .metro-map .map h3 {
+    text-align: center;
+    height: 80px;
+    font-size: 24px;
+    line-height: 80px;
+    background: #bababa; }
+  .metro-map .year {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    padding-bottom: 10px; }
+    .metro-map .year:nth-child(2) h3 {
+      background: #8e8e8e; }
+    .metro-map .year:nth-child(3) h3 {
+      background: #797979; }
+  .metro-map .year-1 {
+    background: #bababa; }
+    .metro-map .year-1 .route {
+      background: #f5f5f5; }
+  .metro-map .year-2 {
+    background: #8e8e8e; }
+    .metro-map .year-2 .route {
+      background: #eaeaea; }
+  .metro-map .year-3 {
+    background: #797979; }
+    .metro-map .year-3 .route {
+      background: #e1e1e1; }
+  .metro-map .route {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    height: 80px;
+    vertical-align: top;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+    .metro-map .route:before {
+      z-index: 1;
+      content: '';
+      display: block;
+      width: 100%;
+      position: absolute;
+      height: 4px;
+      left: 0;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+          -ms-transform: translate(0, -50%);
+              transform: translate(0, -50%); }
+  .metro-map .station {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    position: relative; }
+    .metro-map .station span {
+      z-index: 2;
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      border: 2px solid #f0f0f0;
+      border-radius: 20px;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1); }
+  .metro-map aside.left {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    width: 17%;
+    height: 400px; }
+    .metro-map aside.left:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 200px;
+      height: 76px;
+      border: 4px solid #01b050;
+      border-radius: 30px;
+      left: 55%;
+      top: 118px; }
+    .metro-map aside.left:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 200px;
+      height: 76px;
+      border: 4px solid #fe0509;
+      border-radius: 30px;
+      left: 55%;
+      top: 198px; }
+    .metro-map aside.left svg {
+      width: 90px;
+      height: 90px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      z-index: 3; }
+    .metro-map aside.left > span {
+      display: block;
+      position: relative;
+      z-index: 1; }
+    .metro-map aside.left span.routes-top:before {
+      display: block;
+      content: '';
+      border: 4px solid #5082bd;
+      border-radius: 30px;
+      height: 156px;
+      width: 150%;
+      top: 38px;
+      position: absolute;
+      z-index: 1;
+      left: 0px; }
+    .metro-map aside.left span.routes-top:after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 198px;
+      width: 50%;
+      height: 4px;
+      background: #fdc002;
+      z-index: 2;
+      left: 50%; }
+    .metro-map aside.left span.routes-bottom:before {
+      position: absolute;
+      display: block;
+      width: 300px;
+      height: 156px;
+      content: '';
+      border: 4px solid #662099;
+      top: 198px;
+      left: 45%;
+      z-index: 1;
+      border-radius: 30px; }
+  .metro-map aside.right {
+    z-index: 1;
+    position: absolute;
+    width: 17%;
+    bottom: 10px;
+    right: 20px; }
+    .metro-map aside.right .route span {
+      box-sizing: border-box;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #333333;
+      display: block;
+      font-size: 22px;
+      width: 130px;
+      right: 0;
+      position: absolute;
+      text-align: center;
+      background: white;
+      height: 60px;
+      z-index: 2;
+      top: 10px;
+      line-height: 60px;
+      border-width: 3px;
+      border-style: solid;
+      border-radius: 5px;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2); }
+    .metro-map aside.right .route-54 span,
+    .metro-map aside.right .route-55 span,
+    .metro-map aside.right .route-56 span {
+      font-size: 13px;
+      line-height: 1.2;
+      padding-top: 13px; }
+
+.route-nav {
+  min-height: 20vh;
+  margin-bottom: 20px; }
+
+.content {
+  padding: 10px;
+  overflow: auto; }
+  .content .toggle-full {
+    padding: 10px;
+    box-sizing: border-box; }
+    .content .toggle-full hr {
+      margin: 20px 0px 0px; }
+    .content .toggle-full a {
+      background: #666666;
+      color: #e1e1e1; }
+      .content .toggle-full a.active {
+        background: #333333;
+        color: white; }
+    @media only screen and (min-width: 768px) {
+      .content .toggle-full {
+        float: right;
+        width: 33.33333%; } }
+    @media only screen and (min-width: 1280px) {
+      .content .toggle-full {
+        float: left;
+        width: 25%; } }
+  .content main {
+    padding: 10px;
+    box-sizing: border-box; }
+    .content main hr {
+      margin: 20px 0px 0px; }
+    @media only screen and (min-width: 768px) {
+      .content main {
+        width: 66.6666%;
+        float: left; } }
+    @media only screen and (min-width: 1280px) {
+      .content main {
+        width: 50%;
+        float: left; } }
+  .content main article {
+    min-height: 600px;
+    position: relative;
+    padding: 20px !important; }
+    .content main article:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      opacity: .07;
+      z-index: -1; }
+  .content .sidebar-route {
+    padding: 10px;
+    box-sizing: border-box; }
+    .content .sidebar-route hr {
+      margin: 20px 0px 0px; }
+    @media only screen and (min-width: 768px) {
+      .content .sidebar-route {
+        float: right;
+        width: 33.33333%; } }
+    @media only screen and (min-width: 1280px) {
+      .content .sidebar-route {
+        width: 25%; } }
+    .content .sidebar-route a {
+      font-size: 90%;
+      position: relative;
+      -webkit-transition: background .2s;
+              transition: background .2s; }
+      .content .sidebar-route a:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.4);
+        position: absolute; }
+      .content .sidebar-route a.current, .content .sidebar-route a:hover {
+        background: #333333; }
+    .content .sidebar-route a:nth-child(1):before {
+      opacity: calc((10 - 1)/10); }
+    .content .sidebar-route a:nth-child(2):before {
+      opacity: calc((10 - 2)/10); }
+    .content .sidebar-route a:nth-child(3):before {
+      opacity: calc((10 - 3)/10); }
+    .content .sidebar-route a:nth-child(4):before {
+      opacity: calc((10 - 4)/10); }
+    .content .sidebar-route a:nth-child(5):before {
+      opacity: calc((10 - 5)/10); }
+    .content .sidebar-route a:nth-child(6):before {
+      opacity: calc((10 - 6)/10); }
+    .content .sidebar-route a:nth-child(7):before {
+      opacity: calc((10 - 7)/10); }
+    .content .sidebar-route a:nth-child(8):before {
+      opacity: calc((10 - 8)/10); }
+    .content .sidebar-route a:nth-child(9):before {
+      opacity: calc((10 - 9)/10); }
+    .content .sidebar-route a:nth-child(10):before {
+      opacity: calc((10 - 10)/10); }
+
+/*# sourceMappingURL=metro.css.map */

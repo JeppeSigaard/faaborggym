@@ -1,0 +1,87 @@
+.route-49 .paint, 
+.route-49 .before-paint:before, 
+.route-49:before,
+.route-49 .owl-item:before,
+.route-60 .paint, 
+.route-60 .before-paint:before, 
+.route-60:before,
+.route-60 .owl-item:before{
+    background-color:$metro-at;
+}
+.route-49 span,
+.route-60 span{
+border-color:$metro-at;
+}
+
+.route-50 .paint, 
+.route-50 .before-paint:before, 
+.route-50:before,
+.route-50 .owl-item:before,
+.route-61 .paint, 
+.route-61 .before-paint:before, 
+.route-61:before,
+.route-61 .owl-item:before{
+    background-color:$metro-srp;
+}
+.route-50 span,
+.route-61 span{
+border-color:$metro-srp
+}
+
+.route-51 .paint, 
+.route-51 .before-paint:before, 
+.route-51:before,
+.route-51 .owl-item:before,
+.route-62 .paint, 
+.route-62 .before-paint:before, 
+.route-62:before,
+.route-62 .owl-item:before{
+    background-color:$metro-us;
+}
+.route-51 span,
+.route-62 span{
+border-color:$metro-us;
+}
+
+.route-53 .paint, 
+.route-53 .before-paint:before, 
+.route-53:before,
+.route-53 .owl-item:before,
+.route-63 .paint, 
+.route-63 .before-paint:before, 
+.route-63:before,
+.route-63 .owl-item:before{
+    background-color:$metro-ss;
+}
+.route-53 span,
+.route-63 span{
+border-color:$metro-ss;
+}
+
+.route-52 .paint, 
+.route-52 .before-paint:before, 
+.route-52:before,
+.route-52 .owl-item:before,
+.route-64 .paint, 
+.route-64 .before-paint:before, 
+.route-64:before,
+.route-64 .owl-item:before{
+    background-color:$metro-sf;
+}
+.route-52 span,
+.route-64 span{
+border-color:$metro-sf;
+}
+
+/*
+
+
+REMAP FROM PROJECT DEMO
+
+52 :--> 49
+53 :--> 50
+54 :--> 51
+55 :--> 53
+56 :--> 52
+
+*/

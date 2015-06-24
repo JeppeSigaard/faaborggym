@@ -1,0 +1,38 @@
+#top-map-nav{
+    
+    height:0;
+    overflow:hidden;
+    transition:height .3s;
+    position: relative;
+    background: white;
+    z-index: 11;
+    
+    a{
+        
+        svg{
+            width:60px;
+            height:70px;
+            @media only screen and(min-width:769px){
+            
+                width:100px;
+                height:120px;
+                
+            }
+            
+            position:relative;
+            margin:auto;
+            display: block;
+        }
+    }
+    
+} 
+
+.single #top-map-nav{
+    height: 70px;
+    @media only screen and(min-width:769px){
+    
+        height:120px;
+        
+    }
+    
+}

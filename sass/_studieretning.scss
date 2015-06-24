@@ -1,0 +1,97 @@
+$fag-dark:          #2e85a5;
+$fag-light:         #5ba0b9;
+$fag-lighter:       #8abbcd;
+$fag-trans-black:   rgba(0,0,0,.7);
+$fag-trans-white:   rgba(255,255,255,.75);
+
+
+.archive-entry-fag{
+    
+    h5{
+        font-size:1rem;
+        font-weight:bold;
+        margin:20px 0px 0px;
+    }
+    
+    .archive-fag{
+
+        display:table;
+        width:100%;
+
+        .sr-fag{
+            display: table-row;
+            width:100%;
+            vertical-align: top;
+            padding:0 0 30px;
+            margin:0px 0 2px;
+            box-sizing: border-box;
+            background:$fag-dark;
+            height:100%;
+            color:white;
+            font-weight:bold;
+
+            &.sr-fag-b{
+                background:$fag-light;
+            }
+
+            &.sr-fag-c{
+                background:$fag-lighter;
+            }
+
+            h4{
+                text-transform: uppercase;
+                font-size:2rem;
+                color:white;
+            }
+
+            span{
+                display:block;
+                padding:5px 15px;
+                margin:1px 0px;
+            }
+
+            .sr-retning span{
+                background:$fag-trans-black;
+            }
+
+            .sr-valg span{
+                background:$fag-trans-white;
+                color:$black;
+            }
+        }
+
+    }
+
+    .sr-regler{
+        padding:20px 0px 0px;
+    }
+    
+    .sr-adgang{
+        padding:20px 0px 0px;
+        font-weight:bold;
+    }
+
+    .sr-links{
+        
+        a {
+            display: block;
+            margin: 5px 0px;
+            }
+
+    }
+
+}
+
+@media(min-width:960px){
+    
+    .archive-entry-fag{
+
+        .archive-fag{
+
+            .sr-fag{
+                display: table-cell;
+                width:33.33333333333333%;
+            }
+        }
+    }
+}

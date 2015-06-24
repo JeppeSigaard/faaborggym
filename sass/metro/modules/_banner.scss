@@ -1,0 +1,48 @@
+.metro-banner{
+    background:url('statics/banner.jpg') center no-repeat;
+    background-size:cover;
+    height:192px;
+    padding-bottom:0;
+    
+    margin-bottom: 20px;
+    position: relative;
+    
+    @media only screen and(min-width:480px){
+        padding-bottom:40%;
+        height:0;
+    }
+    
+
+    &:before{
+        background-color:rgba($blue,.2);
+        background-image: none;
+    }
+    
+    svg{
+        width:100px;
+        height:100px;
+        transition: height .2s, width .2s;
+        position:absolute;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        z-index:2;
+        margin-top:20px;
+        
+        @media only screen and(min-width:640px){
+            
+        width:150px;
+        height:150px;
+        
+        }
+        
+        @media only screen and(min-width:768px){
+            
+        width:200px;
+        height:200px;
+        
+        }
+        
+    }
+    
+}

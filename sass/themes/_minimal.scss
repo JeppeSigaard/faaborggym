@@ -1,0 +1,67 @@
+body.smamo-theme-5{
+    
+    background:#fff;
+    color:#333;
+    
+    hr.red{
+       background-image:url(statics/grey-long.gif);
+    }
+    
+    #head, .ubermenu-skin-none.ubermenu-responsive-toggle {
+        
+        background:#333;
+    
+    }
+    
+    .blueonwhite, #slideshow .slide .text h2, #slideshow .slide .text span{
+        color: #333;
+    }
+    
+    
+    #page-title, form #status-buttons div.left, form #status-buttons div.left > a {
+        color:#333;
+    }
+    
+    .archive-entry .archive-content{
+        background:#fff;
+        color:#333;
+        padding: 20px 0px 50px;
+    }
+    
+    .whiteonblue, .smamo_img_widget span, .status_post div:first-child span {
+        color: #333;
+        background: #efefef;
+        box-shadow: 10px 0 0 #efefef, -10px 0 0 #efefef;
+    }
+
+    .smamo_img_widget span {
+        color: #444;
+    }
+    
+    form #status-compose, form #status-buttons #btn-send {
+        background: #333;
+    }
+
+    .archive-entry .archive-preread {
+        background: #efefef;
+        color:#333;
+    
+        &:hover{
+            background: #f5f5f5;
+        }
+    
+    }
+    
+    .archive-entry.reading:hover .archive-preread {
+        
+        background: #efefef;
+        color:#333;
+    
+        &:hover{
+            background: #efefef;
+        }
+    
+    
+    }
+
+}

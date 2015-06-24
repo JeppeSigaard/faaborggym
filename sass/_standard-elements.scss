@@ -1,0 +1,159 @@
+
+
+hr.red, .content>article>hr{
+    background-image:url(statics/red-long.png);
+    background-repeat:repeat-x;
+    background-position: -5px;
+    height:2px;
+    border:none;
+    margin:0 20px;
+
+}
+
+.content table{
+    width:100%;
+}
+
+.content>article>hr{
+    margin:20px 0px;
+}
+
+.whiteonblue{
+    color: #fff;
+    text-decoration: none;
+    background: $blue;
+    display: inline;
+    font-weight: normal;
+    box-shadow: 10px 0 0 $blue, -10px 0 0 $blue;
+    box-decoration-break: clone;
+}
+
+.whiteonblack{
+    color: #fff;
+    text-decoration: none;
+    background: $black;
+    display: inline;
+    font-weight: normal;
+    box-shadow: 10px 0 0 $black, -10px 0 0 $black;
+    box-decoration-break: clone;
+}
+
+
+
+.blueonwhite{
+    color: $blue;
+    text-decoration: none;
+    background: #fff;
+    display: inline;
+    font-weight: normal;
+    box-shadow: 10px 0 0 #fff, -10px 0 0 #fff;
+    box-decoration-break: clone;
+}
+
+/* CONTENT */
+#content-main{
+    padding:0px 0px;
+    max-width:1600px;
+    margin:auto;
+    
+    hr.red{
+        margin:0px 10px;
+    }
+    
+    >div{
+        
+        display: inline-block;
+        width:100%;
+        
+    }
+}
+
+@media(min-width:480px){
+    #content-main{
+        padding:0px 10px;
+    }
+}
+
+
+/* WIDGETS */
+.widget-container{
+    padding:20px 10px!important;
+}
+
+.ubermenu .ubermenu-widget{
+    padding:20px 20px!important;
+}
+
+
+/* Billede-widget */
+
+
+.smamo_img_widget{
+    
+    position:relative!important;
+    
+    div{
+        
+        position: absolute;
+        bottom: 80px;
+        left: 20px;
+        width: 80%;
+        word-wrap: break-word;
+        
+        span {
+            @extend .whiteonblue;
+            position:relative;
+            color: #fff;
+            font-size: 24px;
+            line-height:28px;
+        }
+    }
+
+}
+
+
+/* Projekter og temaer */
+.pt-widget-box {
+    display: block;
+    color: #fff;
+    background: $yellow;
+    text-align: center;
+    text-decoration: none;
+    position:relative;
+    
+    img{
+        padding:60px 0px;
+        width:200px;
+        transition:margin-left .3s;
+        display:inline-block;
+    }
+
+    
+    h3{
+        display: block;
+        height:30px;
+        line-height:30px;
+        width:100%;
+        background:$black;
+    }
+    
+    span{
+        display: block;
+        color:$black;
+        padding:20px 0px;
+        font-size:.8rem;
+    }
+
+}
+
+
+.filter{
+    background-image:$load_b!important;
+    background-position:center center!important;
+    background-repeat:no-repeat!important;
+    background-color:$blue!important;
+    
+    img{
+        opacity:.4;
+    }
+}

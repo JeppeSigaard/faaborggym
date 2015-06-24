@@ -1,0 +1,79 @@
+$lavendel-dark  :#cc99cc;
+$lavendel-lightdark  :#e0c2e0;
+$lavendel-medium  :#f0e0f0;
+$lavendel-light  :#f5ebf5;
+$lavendel-lighter  :#faf5fa;
+
+body.smamo-theme-3{
+    
+    background:#fff;
+    color:#333;
+    
+    hr.red{
+       background-image:url(statics/lavendel-long.png);
+    }
+    
+    #head, .ubermenu-skin-none.ubermenu-responsive-toggle {
+        background: $lavendel-dark;
+        transition:.5s;
+    
+    }
+    
+    .blueonwhite, #slideshow .slide .text h2, #slideshow .slide .text span{
+        color: #333;
+        background: $lavendel-dark;
+        box-shadow: 10px 0 0 $lavendel-dark, -10px 0 0 $lavendel-dark;
+    }
+    
+    
+    #page-title {
+    
+    }
+    
+    form #status-buttons div.left, form #status-buttons div.left > a {
+        color:#333;
+    }
+    
+    .archive-entry .archive-content{
+        background:$lavendel-medium;
+        color:#333;
+    }
+    
+    .whiteonblue, .smamo_img_widget span, .status_post div:first-child span {
+        color: #333;
+        background: $lavendel-dark;
+        box-shadow: 10px 0 0 $lavendel-dark, -10px 0 0 $lavendel-dark;
+    }
+
+    .smamo_img_widget span {
+        color: #333;
+    }
+    
+    form #status-compose, form #status-buttons #btn-send {
+        background: $lavendel-dark;
+    }
+
+    
+    .archive-entry .archive-preread {
+        background: $lavendel-dark;
+        color:#fff;
+    
+        &:hover{
+            background: $lavendel-lightdark;
+        }
+    
+    }
+    
+    .archive-entry.reading:hover .archive-preread {
+        
+        background: $lavendel-dark;
+        color:#fff;
+    
+        &:hover{
+            background: $lavendel-dark;
+        }
+    
+    
+    }
+
+}
