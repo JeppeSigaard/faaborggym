@@ -36,9 +36,10 @@
 
                 foreach($tax_query as $post){
 
-                $post_order ++;
+                    $post_order ++;
+                    $post_reading = '';
                 
-                $post_reading = ($term_id == 26) ? ' reading': '';
+                    if($post_order == 1){$post_reading = ($term_id == 26) ? ' reading': '';}
 
                 include('partials/postlist-medarbejder.php');
                 
