@@ -52,6 +52,9 @@ require('functions/header.php');
 // Tilføj ekstra post types
 require('functions/post-types.php');
 
+// Tilføj taxonomier
+require('functions/taxonomy.php');
+
 // Moduler: options page og post types
 require('functions/moduler.php');
 
