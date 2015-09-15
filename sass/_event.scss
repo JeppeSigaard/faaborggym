@@ -1,0 +1,14 @@
+.post-list-events{
+    
+    .archive-entry .archive-preread,
+    .archive-entry.reading:hover .archive-preread, 
+    .archive-entry.disabled:hover .archive-preread{
+
+        background-color: $calendar-bg-color;
+        
+    }
+    
+    .archive-entry .archive-content{
+        background-color: $calendar-content-bg-color;
+    }
+}
