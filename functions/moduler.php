@@ -69,7 +69,7 @@ function smamo_settings_init(  ) {
 	);
 
     
-    
+    /*
     register_setting( 'pluginPage_2', 'smamo_settings' );
     
     add_settings_section(
@@ -94,7 +94,7 @@ function smamo_settings_init(  ) {
 		'pluginPage_2', 
 		'smamo_pluginPage_section_2' 
 	);
-    
+    */
 }
 
 
@@ -175,16 +175,7 @@ function moduler_options_page(  ) {
                 <p><strong><?php _e('Indstillingerne er gemt.') ?></strong></p>
             </div>
             <?php } ?>
-
-            <?php
-
-            settings_fields( 'pluginPage_2' );
-            do_settings_sections( 'pluginPage_2' );
-
-            submit_button();
-
-            ?>
-            <br/><hr/><br/>
+        
             <?php
 
             settings_fields( 'pluginPage' );

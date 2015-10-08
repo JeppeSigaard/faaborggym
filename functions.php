@@ -71,6 +71,11 @@ require('functions/shortcodes.php');
 require('functions/footer-options.php');
 
 
+// Status post
+require('functions/ajax-is-logged-in.php');
+require('functions/ajax-status.php');
+
+
 
 /////////////////////////
 /* -- INDSTIL TITEL -- */

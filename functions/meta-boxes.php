@@ -25,7 +25,7 @@ function smamo_add_boxes(){
 
     require('meta-boxes/elev.php');
 
-    require('meta-boxes/status.php');
+    //require('meta-boxes/status.php');
 
     require('meta-boxes/tema.php');
 
