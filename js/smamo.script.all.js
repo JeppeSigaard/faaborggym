@@ -22,7 +22,7 @@ var ubermenu_data = {
 // @koala-append 'trumbowyg.js'
 // @koala-append 'pushstate.js'
 // @koala-append 'slideshow.js'
-// @koala-append 'status.js'
+// @koala-append 'status-script.js'
 // @koala-append 'projekt-tema-preview.js'
 // @koala-append 'front-end.js'
 // @koala-append 'filter.js'

@@ -76,9 +76,9 @@ function status_login(){
                     isAuth = true;
                     logStep = 0;
 
-                    $('#btn-login').removeClass('loading').removeClass('right').addClass('hidden-left');
-                    $('#btn-register').removeClass('left').addClass('hidden-left');
-                    $('#btn-send').removeClass('hidden-right').addClass('right');
+                    $('.btn-login').removeClass('loading').removeClass('right').addClass('hidden-left');
+                    $('.btn-register').removeClass('left').addClass('hidden-left');
+                    $('.btn-send').removeClass('hidden-right').addClass('right');
                     $('#status-login').slideUp(200);
                     $('#status-text').removeAttr('disabled').focus();
 
@@ -122,7 +122,7 @@ function status_get_info(){
 function status_logout(){
     console.log('function fired');
     
-    $('#btn-send').removeClass('right').addClass('hidden-right');
+    $('.btn-send').removeClass('right').addClass('hidden-right');
     $('#status-text').attr('disabled','disabled');
     $('#login-text').removeClass('left').addClass('hidden-right').children('span').remove();
     
@@ -143,7 +143,7 @@ function status_logout(){
             isAuth = false;
             logStep = 0;
 
-            $('#btn-login').removeClass('hidden-left').addClass('right');
+            $('.btn-login').removeClass('hidden-left').addClass('right');
 
         }
             
@@ -211,7 +211,7 @@ function status_register(){
                 if(response.error){
                     regStep = 1;
                     error_msg('#status-register',response.error,5000);
-                    $('#btn-register').removeClass('loading')
+                    $('.btn-register').removeClass('loading')
                 
                 }
                 else{
@@ -220,9 +220,9 @@ function status_register(){
                     regStep = 3;
 
                     $('#status-register').slideUp(200);
-                    $('#btn-login').removeClass('loading').removeClass('right').addClass('hidden-left');
-                    $('#btn-register').removeClass('left').removeClass('loading').addClass('hidden-left');
-                    $('#btn-send').removeClass('hidden-right').addClass('right');
+                    $('.btn-login').removeClass('loading').removeClass('right').addClass('hidden-left');
+                    $('.btn-register').removeClass('left').removeClass('loading').addClass('hidden-left');
+                    $('.btn-send').removeClass('hidden-right').addClass('right');
                     $('#status-login').slideUp(200);
                     $('#status-text').removeAttr('disabled').focus();
 
@@ -240,15 +240,15 @@ function status_register(){
 
 
 // DOCUMENT READY
-$(function(){if($('#module-status').length){
+$(function(){if($('.module-status').length){
     
-    if($('#module-status').hasClass('isAuth')){
+    if($('.module-status').hasClass('isAuth')){
         isAuth = true;
         status_get_info();
         
-        $('#btn-login').removeClass('loading').removeClass('right').addClass('hidden-left');
-        $('#btn-register').removeClass('left').addClass('hidden-left');
-        $('#btn-send').removeClass('hidden-right').addClass('right');
+        $('.btn-login').removeClass('loading').removeClass('right').addClass('hidden-left');
+        $('.btn-register').removeClass('left').addClass('hidden-left');
+        $('.btn-send').removeClass('hidden-right').addClass('right');
         $('#login-text').removeClass('hidden-right').addClass('left');
                                               
     }
@@ -259,19 +259,19 @@ $(function(){if($('#module-status').length){
     
     
     
-$('#btn-login').click(function(e){
+$('.btn-login').click(function(e){
     e.preventDefault();
     
     if(isAuth){status_logout();}
     else{ 
         if(logStep === 0){
             $('#status-login').slideDown(200);
-            $('#btn-register').removeClass('hidden-left').addClass('left')
+            $('.btn-register').removeClass('hidden-left').addClass('left')
         
         logStep ++;
         }
         else if (logStep === 1){
-            $('#btn-login').addClass('loading');
+            $('.btn-login').addClass('loading');
             status_login();
         }
     }
@@ -288,7 +288,7 @@ $('#status-logout').click(function(e){
 
     
     
-$('#btn-send').click(function(s){
+$('.btn-send').click(function(s){
     s.preventDefault;
     
     if(!$(this).hasClass('loading')){
@@ -315,7 +315,7 @@ $('#btn-send').click(function(s){
                 
                     $('#status-text').val('');
 
-                    $('#btn-send').removeClass('loading');
+                    $('.btn-send').removeClass('loading');
 
                     $('#module-status-posts').append('<div class="status_post status_post_new" id="post_'+response.status_id+'"></div>').append('<hr class="red"/>');
                     $('#post_'+response.status_id).append('<div><span>'+response.msg+'</span></div><div><span>'+response.user_name+'</span></div>');
@@ -349,21 +349,21 @@ $('#btn-send').click(function(s){
     
     }});
     
-$('#btn-register').click(function(e){
+$('.btn-register').click(function(e){
     e.preventDefault();
     
     if(regStep === 0){
         $('#status-login').slideUp(200);
         $('#status-register').slideDown(200);
     
-        $('#btn-register').removeClass('left').addClass('right')
-        $('#btn-login').removeClass('right').addClass('hidden-right')
+        $('.btn-register').removeClass('left').addClass('right')
+        $('.btn-login').removeClass('right').addClass('hidden-right')
     
     regStep ++;
     }
     else if(regStep === 1){
         regStep ++;
-        $('#btn-register').addClass('loading');
+        $('.btn-register').addClass('loading');
         status_register();
     }
     });    

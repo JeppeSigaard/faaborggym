@@ -28,7 +28,7 @@ get_template_part('partials/content','slider');
         <?php dynamic_sidebar( 'front-widgets-right' ); ?> 
     </div>
     <div class="content" id="page-center">
-        <?php get_template_part('moduler/status','index') ?>
+        <?php get_template_part('moduler/status/status','main') ?>
     </div>
     <div class="content" id="page-left">
          <?php dynamic_sidebar( 'front-widgets-left' ); ?> 
