@@ -154,11 +154,7 @@ require 'widgets/helpers.php';
 
 
 /* Ekstra widgets */
-
-
-// Gul kasse
 require 'widgets/smamo-gul-kasse.php';
-
-
+require 'widgets/smamo-instagram-widget.php';
 require 'widgets/smamo-img-widget.php';
 

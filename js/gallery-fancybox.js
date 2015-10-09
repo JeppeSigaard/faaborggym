@@ -2,7 +2,7 @@ $(function(){
    
     if($(".gallery").length){
 
-        $('.gallery a').addClass('fancybox');
+        $('.gallery a.gallery-item').addClass('fancybox');
         
         
         $(".fancybox").fancybox({

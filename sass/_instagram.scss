@@ -1,0 +1,88 @@
+.instagram-box{
+    box-sizing:border-box;
+    
+    *{
+         box-sizing:inherit;
+    }
+    
+    header{
+        background: $blue;
+        position:relative;
+        margin-right:52px;
+        height:52px;
+        margin-bottom:10px;
+        
+        &:before{
+            content:'';
+            position: absolute;
+            top:-10px;
+            bottom:-10px;
+            width:60px;
+            left:10px;
+            background: transparent url(statics/insta.png) center no-repeat;
+        }
+        
+        &:after{
+            content: '';
+            position: absolute;
+            right: -52px;
+            top: 0;
+            width: 0;
+            border-left: 52px solid $blue;
+            border-bottom: 52px solid transparent;
+        }
+        
+        a{
+            text-decoration: none!important;
+        }
+        
+        h4{
+            color:white;
+            padding-left:80px;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        
+    }
+    
+    
+    
+    ul{
+    
+        margin: 5px -5px 15px;
+        position: relative;
+        overflow: hidden;
+        height: 0;
+        padding-bottom: 100%;
+        transition: padding-bottom 500ms;
+        
+        &.expand{
+            padding-bottom: 200%;
+        }
+        
+        a{
+            display: block;
+            float:left;
+            width:50%;
+            height:0;
+            padding-bottom: calc(50% - 10px);
+            border:5px solid white;
+            background-color: $blue;
+            background-image: url(statics/loading_blue.gif);
+            background-repeat:  no-repeat;
+            background-position: center;
+            
+            &:not(.loading){
+                background-size: cover;
+                background-color: transparent;
+            }
+        }
+        
+    }
+    
+    .news-more-btn{
+        margin:10px 0px 0px;
+        background: $blue;
+    }
+    
+}

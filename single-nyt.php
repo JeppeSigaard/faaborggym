@@ -21,7 +21,7 @@ get_header();
             $sidemenu = '';
             $current_post = get_the_ID();
             $post_order = 0; 
-            $args = array( 'posts_per_page' => -1, 'offset'=> 0, 'post_type' => 'nyt' );
+            $args = array( 'posts_per_page' => get_option('posts_per_page'), 'offset'=> 0, 'post_type' => 'nyt' );
             $myposts = get_posts( $args );
             foreach ( $myposts as $post ) : setup_postdata( $post ); 
             $post_reading = '';

@@ -14,6 +14,8 @@ function remove_width_attribute( $html ) {
 
 // Billedstørrelser
 add_image_size('slide-size', 1206, 438, true);
+add_image_size('gallery-size-large', 500, 560, true);
+add_image_size('gallery-size-small', 250, 180, true);
 add_image_size('news-preview-large',440,440,true);
 add_image_size('news-preview-small',440,220,true);
 add_image_size('medarbejder',190,190,true);

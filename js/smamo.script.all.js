@@ -30,3 +30,5 @@ var ubermenu_data = {
 // @koala-append 'cookiep.js'
 // @koala-append 'dropdownAnsvar.js'
 // @koala-append 'gallery-fancybox.js'
+// @koala-append 'instagram.js'
+// @koala-append 'smamo-gallery.js'

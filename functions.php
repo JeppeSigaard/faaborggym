@@ -75,6 +75,11 @@ require('functions/footer-options.php');
 require('functions/ajax-is-logged-in.php');
 require('functions/ajax-status.php');
 
+// instagram
+require('functions/instagram/ajax-instagram.php');
+
+// mediegalleri
+require('functions/media-gallery.php');
 
 
 /////////////////////////
