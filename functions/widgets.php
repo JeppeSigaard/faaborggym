@@ -123,6 +123,26 @@ function smartmonkey_widgets_init(){
     'after_title' => '</h3>',
     ) );
     
+    
+    // Kalendersiders widgets
+    register_sidebar( array (
+    'name' => __( 'Kalendersiders venstre sidebar', 'smartmonkey' ),
+    'id' => 'cal-widgets-left',
+    'before_widget' => '<div id="%1$s" class="widget-container %2$s front-widget-left">',
+    'after_widget' => "</div><hr class='red'/>",
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+    
+    register_sidebar( array (
+    'name' => __( 'Kalendersiders højre sidebar', 'smartmonkey' ),
+    'id' => 'cal-widgets-right',
+    'before_widget' => '<div id="%1$s" class="widget-container %2$s front-widget-right">',
+    'after_widget' => "</div><hr class='red'/>",
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+    ) );
+    
 
 
 }

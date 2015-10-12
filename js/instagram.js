@@ -19,7 +19,6 @@ smamo_instagram.fetchImages = function(elem, num, callback){
         success : function(response){
             
             if(typeof callback === 'function'){
-                console.log(response);
                 callback(response);
             }
             

@@ -35,6 +35,8 @@ function smamo_add_boxes(){
     
     require('meta-boxes/skrivemetro.php');
     
+    require('meta-boxes/kalender.php');
+    
     
     $mb[] = array(
 

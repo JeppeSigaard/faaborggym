@@ -12,6 +12,7 @@ function smamo_add_post_types() {
     require 'post-types/status.php';
     require 'post-types/fag.php';
     require 'post-types/skrivemetro.php';
+    require 'post-types/kalender.php';
     
     
 	

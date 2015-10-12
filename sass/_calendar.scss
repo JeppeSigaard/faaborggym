@@ -1,0 +1,80 @@
+.archive-entry.type-cal{
+    
+    .archive-preread{
+        background-color: $lightblue;
+         color: $black;
+    }
+    
+    .archive-cal-date{
+        display: block;
+        padding:20px;
+        background-color: $blue;
+        font-weight:bold;
+        color:white;
+        font-size:150%;
+    }
+    
+    &.reading:hover .archive-preread, 
+    &.disabled:hover .archive-preread {
+        background: $lightblue;
+    }
+
+}
+
+@media only screen and(min-width:960px){
+    
+    .archive-entry.type-cal{
+        
+        
+        .archive-cal-date{
+            display: inline-block;
+            width: 120px;
+            height: 120px;
+            float: left;
+            padding:0;
+            font-size:inherit;
+            
+            span{
+                text-align: center;
+                display: block;
+            }
+            
+            span:first-child{
+                font-size:300%;
+                margin:30px 0px 20px;
+            }
+        }
+        
+        .archive-img{
+            float: right;
+            width: 240px;
+            height:120px;
+            padding-top: 0;
+            
+            &:after{
+                display: block;
+                content: '';
+                position: absolute;
+                background-color: transparent;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 0;
+                border-right: 120px solid transparent;
+                border-top: 120px solid $lightblue;
+            }
+        }
+        
+        &.archive-entry-no-img .archive-preread{
+            width:calc(100% - 120px);
+        }
+        
+        .archive-preread{
+            display: inline-block;
+            padding-top: 0;
+            height:120px;
+            width:calc(100% - 360px);
+            display: inline-block;
+        }
+    }
+}

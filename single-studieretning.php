@@ -1,7 +1,7 @@
 <?php 
 
 ////////////////////////////////////////////////
-/* --      ARKIV - Vis studieretninger     -- */
+/* --      SINGLE - Vis studieretninger     -- */
 ////////////////////////////////////////////////
 
 // Hent header
