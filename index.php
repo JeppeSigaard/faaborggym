@@ -20,11 +20,6 @@ get_template_part('partials/content','slider');
         <?php get_template_part('partials/content','nyheder') ?>
     </div>
      <div class="content" id="page-right">
-        <div class="sidemenu-container">
-            <h4>Forsiden</h4>
-            <?php wp_nav_menu( array( 'theme_location' => 'front-menu', 'container' => '') ); ?>
-        </div>
-        <hr class="red"/>
         <?php dynamic_sidebar( 'front-widgets-right' ); ?> 
     </div>
     <div class="content" id="page-center">
