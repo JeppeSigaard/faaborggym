@@ -31,7 +31,7 @@ $options = get_option( 'footer_options' );
                 <p><strong>Email</strong> <?php echo (isset($options['field_4'])) ? esc_attr($options['field_4']) : ''; ?></p>
             </div>
             <div>
-                <p><strong>Kontorets åbninstid</strong></p>
+                <p><strong>Kontorets åbningstid</strong></p>
                 <p>7.45 - 14.30</p>
             </div>
         </div>
