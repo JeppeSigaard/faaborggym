@@ -53,5 +53,8 @@ $options = get_option( 'footer_options' );
     </div>
 </footer>
 <?php wp_footer(); ?>
+<?php if ('skrivemetro' === get_post_type(get_the_ID())) : ?>
+<script src="<?php echo get_template_directory_uri().'/skrivemetro/js/metro.min.js' ?>"></script>
+<?php endif; ?>
 </body>
 </html>

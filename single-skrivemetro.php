@@ -62,4 +62,4 @@ $related = get_posts(array(
         <?php get_template_part('partials/skrivemetro','links'); ?>
     </aside>
 </section>
-<?php get_footer('skrivemetro'); ?>
+<?php get_footer(); ?>

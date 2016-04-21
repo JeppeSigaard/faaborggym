@@ -3,4 +3,4 @@
 <hr class="red">
 <?php get_template_part('skrivemetro/section','map'); ?>
 
-<?php get_footer('skrivemetro'); ?>
+<?php get_footer(); ?>
