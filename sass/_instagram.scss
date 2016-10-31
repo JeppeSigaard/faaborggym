@@ -19,7 +19,7 @@
             bottom:-10px;
             width:60px;
             left:10px;
-            background: transparent url(statics/insta.png) center no-repeat;
+            background: transparent url(../statics/insta.png) center no-repeat;
         }
         
         &:after{
@@ -68,7 +68,7 @@
             padding-bottom: calc(50% - 10px);
             border:5px solid white;
             background-color: $blue;
-            background-image: url(statics/loading_blue.gif);
+            background-image: url(../statics/loading_blue.gif);
             background-repeat:  no-repeat;
             background-position: center;
             

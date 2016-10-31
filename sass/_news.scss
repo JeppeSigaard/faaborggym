@@ -21,7 +21,7 @@
         position:relative;
         padding-top: 50%;
         height: 0;
-        background:$black;
+        background:$fb-blue;
     }
     
     .news-img{
@@ -30,8 +30,16 @@
         display: block;
         position:absolute;
         top:0;
-        background:$lightblue;
+        background-color:$fb-blue;
         overflow:hidden;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        &.loading{
+            background-size: 20px;
+            background-image: url(../statics/loading_blue.gif);
+        }
         
         img{
             height:auto;
@@ -44,7 +52,7 @@
         position:absolute;
         width:100%;
         height:100%;
-        background:$black;
+        background:$fb-blue;
         box-sizing: border-box;
         margin-top: -30px;
         top:100%;
@@ -55,22 +63,62 @@
             line-height:10px;
             color:#fff;
             text-decoration:none;
-            margin:10px;
+            display: block;
+            padding:10px;
             font-weight:bold;
+            background-color: rgba(0,0,0,.1);
+            position: relative;
+
+            svg{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 16px;
+                height: 14px;
+                padding: 8px;
+                fill: white;
+                background-color: rgba(0,0,0,.1);
+            }
         
         }
         
         .news-title{
-            font-size:16px;
-            line-height:1.4;
+            font-size:12px;
+            line-height:1.5;
             color:#fff;
             margin:10px;
-            font-weight:bold;
+            //font-weight:bold;
         }
     }
     &:hover .news-preread{
         margin-top:0;
         top:0;    
+    }
+
+    $news-footer-height: 50px;
+    .news-footer {
+        transition:bottom .15s, opacity .15s;
+        transition-delay: 0;
+        position: absolute;
+        bottom: -$news-footer-height;
+        opacity: 0;
+        width: 100%;
+        height: $news-footer-height;
+        line-height: $news-footer-height;
+        padding: 0px 10px;
+        background-color: rgba(0,0,0,.1);
+        color: white;
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: bold;
+        box-sizing: border-box;
+        text-transform: uppercase;
+    }
+    &:hover .news-footer{
+        bottom: 0px;
+        opacity: 1;
+        transition:bottom .3s, opacity .3s;
+        transition-delay: .15s;
     }
 }
 
@@ -90,12 +138,12 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 13px;
-    background: #292929;
+    background: darken($fb-blue,20);
     border-radius: 5px;
     transition:background .2s;
     
     &:hover{
-        background:$grey;
+        background:darken($fb-blue,15);
     }
 
 }

@@ -16,15 +16,10 @@ get_header();
 <div id="content-main">
     <div class="content" id="page-center">
         <div class="post-list">
+
             <?php 
 
-            $sidemenu = '';
-            
-            $post_reading = '';
-            
-            $post_order = 0;
-            
-           $args = array( 
+            $wp_events = get_posts(array(
                 'posts_per_page' => get_option('posts_per_page'), 
                 'offset'=> 0, 
                 'post_type' => 'kalender',
@@ -32,16 +27,15 @@ get_header();
                 'meta_type' => 'DATETIME',
                 'meta_key' => 'cal_start',
                 'order' => 'ASC',
+            ));
+
+            $events = smamo_merge_events(smamo_fetch_fb_events(), $wp_events);
             
-            );
-            $myposts = get_posts( $args );
-            foreach ( $myposts as $post ) : setup_postdata( $post ); 
+            $post_order = 0;
             $post_reading = '';
+            foreach($events as $event) :
             
-            ////////////////////////////////////////////
-            /* --      Hent liste over nyheder     -- */
-            ////////////////////////////////////////////
-            include 'partials/postlist-cal.php';
+            include get_template_directory() . '/partials/postlist-cal.php';
 
             endforeach; 
             
@@ -49,13 +43,6 @@ get_header();
         </div>
     </div>
     <div class="content" id="page-right">
-        <div class="sidemenu-container">
-            <h4>FG's kalender</h4>
-            <ul id="menu-news-sidemenu" class="menu">
-                <?php echo $sidemenu; ?>
-            </ul>
-        </div>
-        <hr class="red"/>
         <?php dynamic_sidebar( 'cal-widgets-right' ); ?> 
     </div>
     <div class="content" id="page-left">

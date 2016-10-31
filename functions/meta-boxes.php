@@ -29,8 +29,6 @@ function smamo_add_boxes(){
 
     require('meta-boxes/tema.php');
 
-    require('meta-boxes/slideshow.php');
-
     require('meta-boxes/studieretninger.php');
     
     require('meta-boxes/skrivemetro.php');

@@ -40,7 +40,7 @@
         
         &:after{
             content:'';
-            background:url(statics/smear-2.png) no-repeat;
+            background:url(../statics/smear-2.png) no-repeat;
             background-position: right top;
             display:block;
             position: absolute;
@@ -63,7 +63,7 @@
     .ubermenu-submenu-type-stack li.current-menu-item .ubermenu-target:after, 
     .ubermenu-submenu-type-stack li.current-menu-item .ubermenu-target:hover:after{
             
-            background:url(statics/line-through.png) right center no-repeat;
+            background:url(../statics/line-through.png) right center no-repeat;
             cursor:default;
             width:100%;
         
@@ -168,7 +168,7 @@
 }
 .ubermenu-skin-none .ubermenu-submenu .ubermenu-item-header > .ubermenu-target {
     font-size: 1.3rem;
-    background:url(statics/smear.png) no-repeat right center;
+    background:url(../statics/smear.png) no-repeat right center;
     padding:20px 50px 10px 20px;
     color:$black!important;
     font-weight:bold;
@@ -186,7 +186,7 @@
 
 .ubermenu-nojs.ubermenu-skin-none .ubermenu-submenu .ubermenu-tabs .ubermenu-tab:hover > .ubermenu-target,
 .ubermenu-skin-none .ubermenu-submenu .ubermenu-tab.ubermenu-active > .ubermenu-target {
-  background: url(statics/smear.png) no-repeat -370px center;;
+  background: url(../statics/smear.png) no-repeat -370px center;;
   color: #111111;
 }
 .ubermenu-skin-none .ubermenu-tabs-group,

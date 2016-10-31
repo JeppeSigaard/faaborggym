@@ -20,5 +20,17 @@ $mb[] = array(
             'id'    => "cal_end",
             'type' => 'datetime',
             ),
+
+        array(
+            'name' => __('Sted','rwmb'),
+            'id' => 'cal_place',
+            'type' => 'text',
+        ),
+
+        array(
+            'name' => __('Billetlink','rwmb'),
+            'id' => 'cal_ticket',
+            'type' => 'text',
+        ),
     ),
 );

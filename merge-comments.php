@@ -46,7 +46,7 @@ foreach($spg as $status){
         ));
         
         if($comment === 0){
-            die('UNable to add comment '.$comment);
+            die('Unable to add comment '.$comment);
         }
     }
 };

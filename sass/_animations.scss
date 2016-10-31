@@ -7,3 +7,13 @@
     }
 
 }
+
+@keyframes rotate{
+    from{transform-origin: center; transform: rotate(0deg);}
+    to{transform-origin: center; transform: rotate(360deg);}
+}
+
+@keyframes rotateCentered{
+    from{transform-origin: center; transform: translate(-50%,-50%) rotate(0deg);}
+    to{transform-origin: center; transform: translate(-50%,-50%) rotate(360deg);}
+}

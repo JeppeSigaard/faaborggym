@@ -100,9 +100,6 @@ if ($bg_image !== '') :
         <?php dynamic_sidebar( 'tema-widgets-right' ); ?> 
     </div>
     <div class="content" id="page-left">
-        <?php if(get_post_meta($theme_id,'status_include',true) == '1') : ?>
-            <?php include 'moduler/status-tema.php'; ?>
-        <?php endif; ?>
         <?php dynamic_sidebar( 'tema-widgets-left' ); ?>
     </div>
 </div>

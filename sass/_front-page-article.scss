@@ -1,0 +1,24 @@
+#page-center .home-article,
+.home-article{
+    h1{
+        font-size: 200%;
+        line-height: 1.2;
+        padding: 20px 10px 10px;
+        background: $lightestblue;
+    }
+
+    .article-image{
+        height: 0;
+        padding-bottom: 56.25%;
+        background-color: $lightblue;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .article-content{
+        padding: 10px 10px 30px;
+        background: $lightestblue;
+    }
+}

@@ -51,7 +51,7 @@ $_SESSION['smamo_nonce'] = SMAMO_NONCE;
 /* Tilføj post ID til body (fordi det er rart at have) */
 /////////////////////////////////////////////////////////
 $smamo_body_id = '';
-if(!is_home()){
+if(!is_home() && !is_front_page()){
     $smamo_body_id = 'id="post-'.get_the_ID().'"';
 }
 
@@ -78,15 +78,18 @@ if(!is_home()){
         </script>
     </head>
 <body <?php body_class($smamo_body_theme_class); echo $smamo_body_id ?>>
+    <?php get_template_part('partials/header-vectors'); ?>
     <input type="hidden" id="smamo_nonce" name="smamo_nonce" value="<?php echo SMAMO_NONCE ?>"/>
-    <?php if (is_home()) : // Projekter og temaer hentes asynkront, hvis vi er på forsiden ?>
-        <section id="projekt-tema-preview" class="top loading">
-            <a class="pt-preview-box" id="pt-preview-arrow" href="<?php echo bloginfo('url') ?>/tema/">
-                <div>
-                </div>
-            </a>
-        </section>
-    <?php endif; // END Projekter og temaer til forsiden ?>
+    <?php if (is_home() || is_front_page() ){
+
+        if(get_theme_mod('topbar_show') === 'pt-preview'){
+            get_template_part('partials/content','pt-preview');
+        }
+
+        else{
+            get_template_part('partials/content','topbar');
+        }
+    }?>
     <section id="head">
         <a id="logo" class="logo-container" href="<?php echo get_bloginfo('url'); ?>">
             <img src="<?php header_image(); ?>" alt="<?php echo get_bloginfo(); ?>" />

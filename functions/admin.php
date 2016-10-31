@@ -16,8 +16,7 @@ function remove_menus(){
 
 // tilføj menuer
 function add_menus(){
-    
-add_menu_page('Medier', 'Medier', 'manage_options', 'upload.php', '', 'dashicons-admin-media', 10 );
+
 
 }
 
@@ -35,7 +34,6 @@ function adjust_the_wp_menu() {
 	
 	// Indstillinger
 	remove_submenu_page( 'options-general.php', 'options-discussion.php' ); // Diskussion
-	remove_submenu_page( 'options-general.php', 'options-permalink.php' ); // Permalinks
     add_submenu_page( 'options-general.php', 'Plugins', 'Plugins', 'manage_options', 'plugins.php'); 
     add_submenu_page( 'options-general.php', 'Brugere', 'Brugere', 'manage_options', 'users.php'); 
 

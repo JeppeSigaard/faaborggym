@@ -1,0 +1,169 @@
+$topb-height: 48px;
+$topb-icon-width: 52px;
+$topb-icon-svg: 16px;
+$topb-svg-margin-top: ($topb-height - $topb-icon-svg) / 2;
+$topb-svg-margin-left: ($topb-icon-width - $topb-icon-svg) / 2;
+
+$topb-color: rgba($black,.8);
+
+
+#topbar{
+    font-size: 0;
+    background-color:$yellow;
+    height: auto;
+    display: block;
+    position:relative;
+    z-index:20;
+    transition: .3s;
+    padding:0px;
+    box-sizing: border-box;
+    overflow:hidden;
+    height: $topb-height;
+    text-align: right;
+
+    *{box-sizing: inherit;}
+
+    /*
+    &.top{
+        margin-top: -$topb-height;
+    }
+    */
+
+    .pt-preview-link{
+        width: 95px;
+        position: relative;
+        display: inline-block;
+        float: left;
+        padding: 14px 20px;
+
+        img{
+            transform: rotate(0deg);
+            transition: transform 300ms;
+        }
+
+        &:hover img{
+            transform: rotate(720deg);
+        }
+    }
+}
+
+.topbar-icon{
+    vertical-align: top;
+    position: relative;
+    height: $topb-height;
+    width: $topb-icon-width;
+    display: inline-block;
+    outline: none;
+    background: transparent;
+    transition: background 120ms;
+    &:hover{
+        background: lighten($yellow,10);
+    }
+
+    span{
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    svg{
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        width: $topb-icon-svg;
+        height: $topb-icon-svg;
+        fill: $topb-color;
+        margin: $topb-svg-margin-top $topb-svg-margin-left;
+    }
+
+    @media only screen and(min-width:768px){
+        &.topbar-email-icon,
+        &.topbar-phone-icon{
+            width: auto;
+            line-height: $topb-height;
+            font-size: 11px;
+            color: $topb-color;
+            text-decoration: none;
+            padding-right: $topb-icon-svg;
+            svg{
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+
+.topbar-search{
+    height: $topb-height;
+    float: right;
+    position: relative;
+    min-width: $topb-icon-width;
+
+    .topbar-icon{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &.active fieldset{
+        display: inline-block;
+        width: 320px;
+        padding: 0px 10px;
+        background-color: lighten($yellow,20);
+    }
+
+    fieldset{
+        vertical-align: top;
+        height: 50px;
+        line-height: 50px;
+        width: 0px;
+        overflow: hidden;
+        padding: 0px;
+        transition: padding 120ms, width 120ms, background-color 120ms;
+        background-color: transparent;
+
+        input[type="text"]{
+            box-sizing: border-box;
+            display: inline-block;
+            width: calc(100% - #{$topb-icon-width});
+            margin-right: $topb-icon-width;
+            -webkit-appearance: none;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            font-size: 14px;
+            border-radius: 0px;
+            line-height: 2;
+            font-family: inherit;
+            font-weight: inherit;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]{
+            display: none;
+        }
+
+    }
+}
+
+
+@media only screen and(max-width:640px){
+    #topbar.search-active{
+
+        .topbar-icon{
+            display: none;
+        }
+
+        .topbar-search .topbar-icon{
+            display: block;
+        }
+
+    }
+
+}
+
+@media only screen and(max-width:480px){
+    #topbar .pt-preview-link{
+        display: none;
+    }
+
+}

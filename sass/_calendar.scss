@@ -1,7 +1,41 @@
 .archive-entry.type-cal{
     
+    .archive-content-ticket{
+        color: white!important;
+        text-decoration: none!important;
+        background: $blue;
+        transition: background 120ms;
+        height: 40px;
+        line-height: 40px;
+        padding: 0px 20px;
+        margin: 40px 0px -10px;
+        text-align: center;
+        display: block;
+        border-radius: 4px;
+        font-weight: bold;
+
+        &:hover{
+            background: darken($blue,5);
+        }
+
+        @media only screen and(min-width:960px){
+            margin: 40px 0px 0px;
+            float: right;
+            padding: 0px 30px;
+        }
+
+    }
+
+    &.fb-event .archive-content-ticket{
+        background: $fb-blue;
+
+        &:hover{
+            background: darken($fb-blue,5);
+        }
+    }
+
     .archive-preread{
-        background-color: $lightblue;
+        background-color: $calendar-bg-color;
          color: $black;
     }
     
@@ -14,17 +48,158 @@
         font-size:150%;
     }
     
-    &.reading:hover .archive-preread, 
-    &.disabled:hover .archive-preread {
-        background: $lightblue;
+    &.fb-event .archive-cal-date{
+        background-color: $fb-blue;
     }
 
+    &.reading:hover .archive-preread, 
+    &.disabled:hover .archive-preread {
+        background: $calendar-bg-color;
+    }
+
+    .archive-img-fb{
+        position:absolute;
+        width: 40px;
+        height: 60px;
+        @media only screen and(min-width:960px){
+            height: 120px;
+
+        }
+
+        right: 10px;
+        top: 20px;
+        background-color: $fb-blue;
+        fill: white;
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+
+    &:first-child .archive-img-fb{
+        top: 10px;
+    }
+}
+
+#page-center .archive-entry.type-cal.reading {
+    >.archive-cal-date,
+    .archive-preread{
+        display: none;
+    }
+
+    .archive-img {
+        float: none;
+        display: block;
+        width: 100%;
+
+        @media only screen and(min-width:960px){
+            height: 0;
+            padding-bottom: 56.25%;
+        }
+
+    }
+
+    .archive-img-fb{
+        display: none;
+    }
+
+    .archive-content{
+        background: $calendar-bg-color;
+        overflow: hidden;
+        border-bottom: 10px solid $blue;
+
+        h2{
+            font-size: 1.2rem;
+        }
+
+        p{
+            font-size: .85rem;
+            line-height: 1.6;
+        }
+    }
+
+    &.fb-event .archive-content{
+        border-bottom: 10px solid $fb-blue;
+
+    }
+
+    .archive-content-header{
+        margin: -20px -10px 10px -10px;
+        display: block;
+        height: auto;
+        position: relative;
+
+
+        .archive-cal-date{
+            height: 60px;
+            line-height: 60px;
+            padding: 0px 10px;
+            font-size: 1rem;
+            border-bottom: 1px solid white;
+
+            @media only screen and(min-width:960px){
+                border-right: 1px solid white;
+                border-bottom: none;
+                padding: 0px;
+                height: 120px;
+                line-height: 1;
+                font-size: inherit;
+            }
+
+        }
+
+        .archive-cal-time,
+        .archive-cal-address{
+            height: 60px;
+            line-height: 60px;
+            background-color: darken($blue,5);
+            padding-left: 10px;
+
+            @media only screen and(min-width:960px){
+                padding-left: 130px;
+
+            }
+            color: white;
+
+            &:nth-child(2){
+                background-color: $blue;
+                font-weight: bold;
+                border-bottom: 1px solid white;
+            }
+        }
+
+        svg{
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            background-color: $fb-blue;
+            box-sizing: border-box;
+            width: 60px;
+            height: 60px;
+            padding: 16px;
+            @media only screen and(min-width:960px){
+                width: 120px;
+                height: 120px;
+                padding: 36px;
+            }
+
+            fill: white;
+            border-left: 1px solid white;
+        }
+    }
 }
 
 @media only screen and(min-width:960px){
     
-    .archive-entry.type-cal{
+    #page-center .archive-entry.type-cal{
+
+        .archive-content{
+            padding: 20px!important;
+        }
         
+        .archive-content-header{
+            margin: -20px -20px 10px!important;
+            height: 120px;
+        }
         
         .archive-cal-date{
             display: inline-block;
@@ -47,33 +222,50 @@
         
         .archive-img{
             float: right;
-            width: 240px;
+            width: 200px;
             height:120px;
             padding-top: 0;
             
-            &:after{
-                display: block;
-                content: '';
+            img{
                 position: absolute;
-                background-color: transparent;
                 top: 0;
                 left: 0;
-                width: 0;
-                height: 0;
-                border-right: 120px solid transparent;
-                border-top: 120px solid $lightblue;
+                height: 100%;
+                width: auto;
+            }
+
+        }
+        
+        &.archive-entry-no-img{
+
+
+            .archive-preread{
+                width:calc(100% - 120px);
+            }
+
+            .archive-img{
+                width: 0px;
+                padding: 0!important;
             }
         }
         
-        &.archive-entry-no-img .archive-preread{
-            width:calc(100% - 120px);
+        &.archive-entry-no-img.fb-event{
+
+            .archive-preread{
+                width:calc(100% - 160px);
+            }
+
+            .archive-img{
+                width: 40px;
+            }
+
         }
-        
+
         .archive-preread{
             display: inline-block;
             padding-top: 0;
             height:120px;
-            width:calc(100% - 360px);
+            width:calc(100% - 320px);
             display: inline-block;
         }
     }

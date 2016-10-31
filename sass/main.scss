@@ -32,11 +32,17 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 // Projekter og temaer
 @import 'projekt-tema';
 
+// Topbar
+@import 'topbar';
+
 // Header (logo og menu)
 @import 'header';
 
 // Slideshow
 @import 'slideshow';
+
+// Slideshow med video
+@import 'video-container';
 
 // Statusopdateinger
 @import 'status';
@@ -60,8 +66,14 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 // instagram
 @import 'instagram';
 
+// Filter
+@import 'filter';
+
 // smamo-galleri
 @import 'smamo-gallery';
+
+// Forsideartikel
+@import 'front-page-article';
 
 /* PAGE SPECIFICS */
 
@@ -74,6 +86,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 @import 'search';
 
 @import 'calendar';
+@import 'cal-widget';
 
 @import 'studieretning';
 

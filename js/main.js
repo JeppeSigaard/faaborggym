@@ -1,17 +1,11 @@
-
-$(function() {
-    
-    var listStyle = Math.floor(Math.random()*(10-1+1)+1), nlistStyle;
-    $('#page-center li').each(function(){
-        
-        $(this).attr('data-list-style',listStyle);
-        
-        nlistStyle = Math.floor(Math.random()*(10-1+1)+1);
-        if (nlistStyle === listStyle){nlistStyle ++;}
-        listStyle = nlistStyle;
-    });
-    
-    console.log('Chromecast available');
-    
-    
-});
+var ubermenu_data = {
+    "remove_conflicts":"on",
+    "reposition_on_load":"off",
+    "intent_delay":"300",
+    "intent_interval":"100",
+    "intent_threshold":"7",
+    "scrollto_offset":"50",
+    "responsive_breakpoint":"0",
+    "accessible":"on",
+    "retractor_display_strategy":"responsive"
+};

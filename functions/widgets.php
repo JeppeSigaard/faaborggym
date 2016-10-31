@@ -177,4 +177,5 @@ require 'widgets/helpers.php';
 require 'widgets/smamo-gul-kasse.php';
 require 'widgets/smamo-instagram-widget.php';
 require 'widgets/smamo-img-widget.php';
+require 'widgets/smamo-cal-widget.php';
 

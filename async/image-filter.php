@@ -41,6 +41,7 @@ if(file_exists($upload_dir['basedir'].'/filtered/'.$file)){
     // HVIS VI ALLEREDE HAR FILTRERET BILLEDET:
     // SEND STIEN RETUR
     $response['img'] = $upload_dir['baseurl'].'/filtered/'.$file;
+    $response['exist'] = true;
 }
 
 else{
@@ -77,6 +78,7 @@ else{
     /* GEM BILLEDE, TILFØJ STI TIL RESPONSE */
     $image->save($upload_dir['basedir'].'/filtered/', $file, true, null, 100);
     $response['img'] = $upload_dir['baseurl'].'/filtered/'.$file;
+    $response['exist'] = false;
 }
 
 echo json_encode($response);

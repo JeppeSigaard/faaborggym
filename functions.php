@@ -34,6 +34,9 @@ function smartmonkey_setup(){
 /* -- HENT PHP FRA functions/ -- */
 ///////////////////////////////////
 
+// Customizer (vha. Kirki)
+require('functions/kirki/init.php');
+
 // Tilføj stylesheet
 require('functions/styles.php');
 
@@ -56,7 +59,11 @@ require('functions/post-types.php');
 require('functions/taxonomy.php');
 
 // Moduler: options page og post types
-require('functions/moduler.php');
+// require('functions/moduler.php');
+
+// Facebook events
+require 'functions/fb-cal-transient.php';
+require 'functions/cal-rewrite.php';
 
 // Ekstra felter
 require('functions/meta-boxes.php');
@@ -67,13 +74,11 @@ require('functions/helper-functions.php');
 // Shortcodes
 require('functions/shortcodes.php');
 
-// Footer
-require('functions/footer-options.php');
-
-
-// Status post
+// AJAX
 require('functions/ajax-is-logged-in.php');
 require('functions/ajax-status.php');
+require('functions/ajax-fb-feed.php');
+require('functions/ajax/image-filter.php');
 
 // instagram
 require('functions/instagram/ajax-instagram.php');

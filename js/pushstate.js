@@ -44,7 +44,7 @@ function setPopstateReading(elem){
     }
     
             
-    $('html, body').delay(200).animate({scrollTop: elem.offset().top - 20},200);
+    $('html, body').delay(200).animate({scrollTop: elem.offset().top - $('#head').innerHeight()},200);
 
 }
 
@@ -91,7 +91,7 @@ $(function(){
             }
         
         
-            $('html, body').delay(200).animate({scrollTop: $('.archive-entry.reading').offset().top - 20},200);
+            $('html, body').delay(200).animate({scrollTop: $('.archive-entry.reading').offset().top - $('#head').innerHeight()},200);
 
     }
     
@@ -141,16 +141,4 @@ $(function(){
         window.location = path;
     
     });
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
 });
